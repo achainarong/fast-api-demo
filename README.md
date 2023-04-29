@@ -5,7 +5,7 @@
     
     poetry env use C:\Python311\python.exe
 
-    python -m uvicorn fast_api_demo.main:app
+    python -m uvicorn fast_api_demo.main:app --reload
 ```
 
 
