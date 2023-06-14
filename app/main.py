@@ -1,8 +1,14 @@
 from fastapi import FastAPI
+from app.api.routes.api import router as api_router
 
-app = FastAPI()   
+# from app.core.config import app_settings
 
-@app.get("/") 
-async def main_route():     
-  return {"message": "Hello world!!!"}
 
+def init_app() -> FastAPI:
+    application = FastAPI()
+    application.include_router(api_router)
+
+    return application
+
+
+app = init_app()
