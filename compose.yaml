@@ -8,5 +8,5 @@ services:
     expose:
       - "8000"
     volumes:
-      - .:/app
+      - .:/app/:/app
 
